@@ -1,5 +1,0 @@
-source;share/lift_control/local_setup.bash
-source;share/lift_control/local_setup.dsv
-source;share/lift_control/local_setup.ps1
-source;share/lift_control/local_setup.sh
-source;share/lift_control/local_setup.zsh

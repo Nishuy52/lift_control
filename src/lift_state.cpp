@@ -17,6 +17,23 @@ class Lift_State : public rclcpp::Node
   public:
     using Command = lift_control::action::Command;
     using GoalHandleCommand = rclcpp_action::ServerGoalHandle<Command>;
+
+    // Lift status codes as per README
+    enum LiftStatus {
+      FIRST_LEVEL = 1,      // 001: Stationary at First Level
+      BETWEEN_LEVELS = 2,   // 010: Stationary Between Levels
+      MOVING_DOWN = 3,      // 011: Moving to First Level
+      SECOND_LEVEL = 4,     // 100: Stationary at Second Level
+      MOVING_UP = 6         // 110: Moving to Second Level
+    };
+    
+    // Command codes
+    enum CommandType {
+      STOP = 0,
+      GO_UP = 1,
+      GO_DOWN = 2
+    };
+    
     explicit Lift_State(const rclcpp::NodeOptions & options = rclcpp::NodeOptions())
     : Node("lift_state", options), count_(0)
     {
@@ -35,6 +52,9 @@ class Lift_State : public rclcpp::Node
         std::bind(&Lift_State::handle_goal, this, _1, _2),
         std::bind(&Lift_State::handle_cancel, this, _1),
         std::bind(&Lift_State::handle_accepted, this, _1));
+
+      // Report Initialisation
+      RCLCPP_INFO(this->get_logger(), "Lift State node initialized. Status: FIRST_LEVEL");
     }
 
   private:
@@ -46,31 +66,89 @@ class Lift_State : public rclcpp::Node
     // Action Server Members
     rclcpp_action::Server<Command>::SharedPtr action_server_;
 
+    // Lift Status Members
+    LiftStatus current_status_;
+    std::mutex status_mutex_;
+
     // Publisher Callback
     void timer_callback()
     {
+      std::lock_guard<std::mutex> lock(status_mutex_);
       auto message = std_msgs::msg::String();
-      message.data = "Insert Data" + std::to_string(count_++);
-      RCLCPP_INFO(this->get_logger(), "Lift State: '%s'", message.data.c_str());
+      message.data = get_status_string(current_status_);
+      RCLCPP_INFO(this->get_logger(), "Lift Status: %s", message.data.c_str());
       publisher_->publish(message);
     }
 
-    // Action Server Callbacks
-    rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID & uuid,
-                                             std::shared_ptr<const Command::Goal> goal)
+    std::string get_status_string(LiftStatus status)
     {
-    RCLCPP_INFO(this->get_logger(), "Received command request: %d", goal->command);
-    (void)uuid;
-    
-    // You can add validation logic here
-    // For example, only accept certain command values
-    if (goal->command < 0) {
-      RCLCPP_WARN(this->get_logger(), "Rejecting negative command");
-      return rclcpp_action::GoalResponse::REJECT;
+      switch(status) {
+        case FIRST_LEVEL:
+          return "001: Stationary at First Level";
+        case BETWEEN_LEVELS:
+          return "010: Stationary Between Levels";
+        case MOVING_DOWN:
+          return "011: Moving to First Level";
+        case SECOND_LEVEL:
+          return "100: Stationary at Second Level";
+        case MOVING_UP:
+          return "110: Moving to Second Level";
+        default:
+          return "Unknown Status";
+      }
     }
-    
-    return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
-  }
+
+    // Action Server Callbacks
+    rclcpp_action::GoalResponse handle_goal(
+      const rclcpp_action::GoalUUID & uuid,
+      std::shared_ptr<const Command::Goal> goal)
+    {
+      (void)uuid;
+      std::lock_guard<std::mutex> lock(status_mutex_);
+      
+      RCLCPP_INFO(this->get_logger(), "Received command: %d (0=Stop, 1=Up, 2=Down)", 
+                  goal->command);
+      
+      // Validate command based on current status
+      if (goal->command < STOP || goal->command > GO_DOWN) {
+        RCLCPP_WARN(this->get_logger(), "Invalid command: %d", goal->command);
+        return rclcpp_action::GoalResponse::REJECT;
+      }
+      
+      // Check if command is allowed in current state
+      bool command_allowed = false;
+      std::string rejection_reason;
+      
+      switch(current_status_) {
+        case FIRST_LEVEL:
+          command_allowed = (goal->command == GO_UP);
+          rejection_reason = "At First Level - Only GO_UP accepted";
+          break;
+          
+        case SECOND_LEVEL:
+          command_allowed = (goal->command == GO_DOWN);
+          rejection_reason = "At Second Level - Only GO_DOWN accepted";
+          break;
+          
+        case BETWEEN_LEVELS:
+          command_allowed = (goal->command == GO_UP || goal->command == GO_DOWN);
+          rejection_reason = "Between Levels - Only GO_UP or GO_DOWN accepted";
+          break;
+          
+        case MOVING_UP:
+        case MOVING_DOWN:
+          command_allowed = (goal->command == STOP);
+          rejection_reason = "Lift is Moving - Only STOP accepted";
+          break;
+      }
+      
+      if (!command_allowed) {
+        RCLCPP_WARN(this->get_logger(), "Command rejected: %s", rejection_reason.c_str());
+        return rclcpp_action::GoalResponse::REJECT;
+      }
+      
+      return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
+    }
   rclcpp_action::CancelResponse handle_cancel(
     const std::shared_ptr<GoalHandleCommand> goal_handle)
   {
@@ -95,33 +173,69 @@ class Lift_State : public rclcpp::Node
     auto feedback = std::make_shared<Command::Feedback>();
     auto result = std::make_shared<Command::Result>();
     
-    // Simulate command execution with status updates
-    int total_steps = 10;  // Example: 10 steps to complete command
+    CommandType command = static_cast<CommandType>(goal->command);
     
-    for (int i = 0; i <= total_steps && rclcpp::ok(); ++i) {
-      // Check if there is a cancel request
+    // Handle STOP command
+    if (command == STOP) {
+      std::lock_guard<std::mutex> lock(status_mutex_);
+      current_status_ = BETWEEN_LEVELS;
+      feedback->status = 1;  // Reached (stopped)
+      result->completion = 1;  // Reached
+      goal_handle->publish_feedback(feedback);
+      goal_handle->succeed(result);
+      RCLCPP_INFO(this->get_logger(), "Lift stopped between levels");
+      return;
+    }
+    
+    // Handle GO_UP and GO_DOWN commands
+    int steps = 10;  // Simulated steps to complete movement
+    LiftStatus target_status;
+    LiftStatus moving_status;
+    
+    if (command == GO_UP) {
+      target_status = SECOND_LEVEL;
+      moving_status = MOVING_UP;
+      RCLCPP_INFO(this->get_logger(), "Moving UP to Second Level");
+    } else {  // GO_DOWN
+      target_status = FIRST_LEVEL;
+      moving_status = MOVING_DOWN;
+      RCLCPP_INFO(this->get_logger(), "Moving DOWN to First Level");
+    }
+    
+    // Update status to moving
+    {
+      std::lock_guard<std::mutex> lock(status_mutex_);
+      current_status_ = moving_status;
+    }
+    
+    // Simulate movement
+    for (int i = 0; i <= steps && rclcpp::ok(); ++i) {
+      // Check for cancellation
       if (goal_handle->is_canceling()) {
-        result->completion = (i * 100) / total_steps;  // Partial completion
+        std::lock_guard<std::mutex> lock(status_mutex_);
+        current_status_ = BETWEEN_LEVELS;
+        result->completion = 0;  // Still moving when cancelled
         goal_handle->canceled(result);
-        RCLCPP_INFO(this->get_logger(), "Command canceled at %d%% completion", 
-                    result->completion);
+        RCLCPP_INFO(this->get_logger(), "Command canceled - Lift stopped between levels");
         return;
       }
       
-      // Update status (feedback)
-      feedback->status = i;
+      // Publish feedback
+      feedback->status = 0;  // Moving
       goal_handle->publish_feedback(feedback);
-      RCLCPP_INFO(this->get_logger(), "Command progress - Status: %d/%d", i, total_steps);
+      RCLCPP_INFO(this->get_logger(), "Progress: %d%%", (i * 100) / steps);
       
       loop_rate.sleep();
     }
     
-    // Command execution complete
+    // Movement complete
     if (rclcpp::ok()) {
-      result->completion = 100;  // 100% complete
+      std::lock_guard<std::mutex> lock(status_mutex_);
+      current_status_ = target_status;
+      result->completion = 1;  // Reached
       goal_handle->succeed(result);
-      RCLCPP_INFO(this->get_logger(), "Command succeeded with completion: %d%%", 
-                  result->completion);
+      RCLCPP_INFO(this->get_logger(), "Reached target level: %s", 
+                  get_status_string(target_status).c_str());
     }
   }
 };
