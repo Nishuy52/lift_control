@@ -42,7 +42,7 @@ class Lift_State : public rclcpp::Node
       
       //Initialize timer
       timer_ = this->create_wall_timer(
-      500ms, std::bind(&Lift_State::timer_callback, this));
+      2000ms, std::bind(&Lift_State::timer_callback, this));
       
       //Initialize action server
       using namespace std::placeholders;
@@ -67,7 +67,7 @@ class Lift_State : public rclcpp::Node
     rclcpp_action::Server<Command>::SharedPtr action_server_;
 
     // Lift Status Members
-    LiftStatus current_status_;
+    LiftStatus current_status_ = FIRST_LEVEL;
     std::mutex status_mutex_;
 
     // Publisher Callback
