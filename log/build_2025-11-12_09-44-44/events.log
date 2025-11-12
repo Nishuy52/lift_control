@@ -1,0 +1,597 @@
+[0.000000] (-) TimerEvent: {}
+[0.000200] (lift_control) JobQueued: {'identifier': 'lift_control', 'dependencies': OrderedDict()}
+[0.000590] (lift_control) JobStarted: {'identifier': 'lift_control'}
+[0.007263] (lift_control) JobProgress: {'identifier': 'lift_control', 'progress': 'cmake'}
+[0.007947] (lift_control) Command: {'cmd': ['/usr/bin/cmake', '/home/jason/lift_ws/src/lift_control', '-DCMAKE_INSTALL_PREFIX=/home/jason/lift_ws/src/lift_control/install/lift_control'], 'cwd': '/home/jason/lift_ws/src/lift_control/build/lift_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'jason'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jason/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/jason/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/jason'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/jason'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'id_ID.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1751'), ('SYSTEMD_EXEC_PID', '1983'), ('IM_CONFIG_CHECK_ENV', '1'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6584'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jason/turtlebot3_ws/install:/home/jason/colcon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'jason'), ('JOURNAL_STREAM', '8:25260'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jason'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/jason/.local/bin:/home/jason/.local/bin:/home/jason/colcon_ws/install/tb3_multi_robot/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/jason/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/jason-Yoga-Pro-9-14IRP8:@/tmp/.ICE-unix/1955,unix/jason-Yoga-Pro-9-14IRP8:/tmp/.ICE-unix/1955'), ('INVOCATION_ID', '80f06e14e5ad48a2b895e7a9c68ce042'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.NBLZF3'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-531805ea22.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/jason/turtlebot3_ws/install/turtlebot3:/home/jason/turtlebot3_ws/install/turtlebot3_teleop:/home/jason/turtlebot3_ws/install/turtlebot3_simulations:/home/jason/turtlebot3_ws/install/turtlebot3_bringup:/home/jason/turtlebot3_ws/install/turtlebot3_node:/home/jason/turtlebot3_ws/install/turtlebot3_navigation2:/home/jason/turtlebot3_ws/install/turtlebot3_fake_node:/home/jason/turtlebot3_ws/install/turtlebot3_example:/home/jason/turtlebot3_ws/install/turtlebot3_msgs:/home/jason/turtlebot3_ws/install/turtlebot3_gazebo:/home/jason/turtlebot3_ws/install/turtlebot3_description:/home/jason/turtlebot3_ws/install/turtlebot3_cartographer:/home/jason/turtlebot3_ws/install/tb3_4_cartographer:/home/jason/turtlebot3_ws/install/dynamixel_sdk_examples:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/jason/turtlebot3_ws/install/dynamixel_sdk:/home/jason/colcon_ws/install/tb3_multi_robot:/home/jason/colcon_ws/install/py_pubsub:/home/jason/colcon_ws/install/auto_nav:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jason/lift_ws/src/lift_control/build/lift_control'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jason/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jason/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jason/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/jason/colcon_ws/install/tb3_multi_robot/lib/python3.10/site-packages:/home/jason/colcon_ws/install/py_pubsub/lib/python3.10/site-packages:/home/jason/colcon_ws/install/auto_nav/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('LC_PAPER', 'id_ID.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jason/turtlebot3_ws/install/turtlebot3:/home/jason/turtlebot3_ws/install/turtlebot3_simulations:/home/jason/turtlebot3_ws/install/turtlebot3_bringup:/home/jason/turtlebot3_ws/install/turtlebot3_node:/home/jason/turtlebot3_ws/install/turtlebot3_navigation2:/home/jason/turtlebot3_ws/install/turtlebot3_fake_node:/home/jason/turtlebot3_ws/install/turtlebot3_msgs:/home/jason/turtlebot3_ws/install/turtlebot3_gazebo:/home/jason/turtlebot3_ws/install/turtlebot3_description:/home/jason/turtlebot3_ws/install/turtlebot3_cartographer:/home/jason/turtlebot3_ws/install/tb3_4_cartographer:/home/jason/turtlebot3_ws/install/dynamixel_sdk_examples:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/jason/turtlebot3_ws/install/dynamixel_sdk:/home/jason/turtlebot3_ws/install/turtlebot3_teleop:/home/jason/turtlebot3_ws/install/turtlebot3_example:/home/jason/colcon_ws/install/tb3_multi_robot:/home/jason/colcon_ws/install/py_pubsub:/home/jason/colcon_ws/install/auto_nav:/opt/ros/humble')]), 'shell': False}
+[0.076469] (lift_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099752] (-) TimerEvent: {}
+[0.147972] (lift_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.155330] (lift_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199920] (-) TimerEvent: {}
+[0.250044] (lift_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.256765] (lift_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.257098] (lift_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.257755] (lift_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.261194] (lift_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300174] (-) TimerEvent: {}
+[0.361928] (lift_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.366916] (lift_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.367088] (lift_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.367346] (lift_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.369354] (lift_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400343] (-) TimerEvent: {}
+[0.500602] (-) TimerEvent: {}
+[0.512028] (lift_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.583617] (lift_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.600856] (-) TimerEvent: {}
+[0.617654] (lift_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.622129] (lift_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.628755] (lift_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.637977] (lift_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.650384] (lift_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.684607] (lift_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.687324] (lift_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.701072] (-) TimerEvent: {}
+[0.778956] (lift_control) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.801183] (-) TimerEvent: {}
+[0.807045] (lift_control) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.840775] (lift_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.848002] (lift_control) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.901299] (-) TimerEvent: {}
+[0.921444] (lift_control) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.921762] (lift_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.001420] (-) TimerEvent: {}
+[1.016541] (lift_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.018321] (lift_control) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.064598] (lift_control) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.15 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.089314] (lift_control) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[1.101650] (-) TimerEvent: {}
+[1.109241] (lift_control) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.201761] (-) TimerEvent: {}
+[1.302082] (-) TimerEvent: {}
+[1.318658] (lift_control) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.402255] (-) TimerEvent: {}
+[1.502475] (-) TimerEvent: {}
+[1.531428] (lift_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.602609] (-) TimerEvent: {}
+[1.616238] (lift_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.644391] (lift_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.647410] (lift_control) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.676825] (lift_control) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.676977] (lift_control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.677043] (lift_control) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.677097] (lift_control) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.695556] (lift_control) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.702807] (-) TimerEvent: {}
+[1.754649] (lift_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.774515] (lift_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.775174] (lift_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_c>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_fastrtps_c>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_cpp>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_fastrtps_cpp>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_introspection_cpp>;/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_c;/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_py;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/include>\n'}
+[1.775237] (lift_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.776332] (lift_control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.778030] (lift_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.779094] (lift_control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.784454] (lift_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.784494] (lift_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.785669] (lift_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.787245] (lift_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.802904] (-) TimerEvent: {}
+[1.813413] (lift_control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.824506] (lift_control) StdoutLine: {'line': b'-- Build files have been written to: /home/jason/lift_ws/src/lift_control/build/lift_control\n'}
+[1.834089] (lift_control) CommandEnded: {'returncode': 0}
+[1.834396] (lift_control) JobProgress: {'identifier': 'lift_control', 'progress': 'build'}
+[1.834982] (lift_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jason/lift_ws/src/lift_control/build/lift_control', '--', '-j20', '-l20'], 'cwd': '/home/jason/lift_ws/src/lift_control/build/lift_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'jason'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jason/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/jason/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/jason'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/jason'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'id_ID.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1751'), ('SYSTEMD_EXEC_PID', '1983'), ('IM_CONFIG_CHECK_ENV', '1'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6584'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jason/turtlebot3_ws/install:/home/jason/colcon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'jason'), ('JOURNAL_STREAM', '8:25260'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jason'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/jason/.local/bin:/home/jason/.local/bin:/home/jason/colcon_ws/install/tb3_multi_robot/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/jason/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/jason-Yoga-Pro-9-14IRP8:@/tmp/.ICE-unix/1955,unix/jason-Yoga-Pro-9-14IRP8:/tmp/.ICE-unix/1955'), ('INVOCATION_ID', '80f06e14e5ad48a2b895e7a9c68ce042'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.NBLZF3'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-531805ea22.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/jason/turtlebot3_ws/install/turtlebot3:/home/jason/turtlebot3_ws/install/turtlebot3_teleop:/home/jason/turtlebot3_ws/install/turtlebot3_simulations:/home/jason/turtlebot3_ws/install/turtlebot3_bringup:/home/jason/turtlebot3_ws/install/turtlebot3_node:/home/jason/turtlebot3_ws/install/turtlebot3_navigation2:/home/jason/turtlebot3_ws/install/turtlebot3_fake_node:/home/jason/turtlebot3_ws/install/turtlebot3_example:/home/jason/turtlebot3_ws/install/turtlebot3_msgs:/home/jason/turtlebot3_ws/install/turtlebot3_gazebo:/home/jason/turtlebot3_ws/install/turtlebot3_description:/home/jason/turtlebot3_ws/install/turtlebot3_cartographer:/home/jason/turtlebot3_ws/install/tb3_4_cartographer:/home/jason/turtlebot3_ws/install/dynamixel_sdk_examples:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/jason/turtlebot3_ws/install/dynamixel_sdk:/home/jason/colcon_ws/install/tb3_multi_robot:/home/jason/colcon_ws/install/py_pubsub:/home/jason/colcon_ws/install/auto_nav:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jason/lift_ws/src/lift_control/build/lift_control'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jason/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/jason/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/jason/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/jason/colcon_ws/install/tb3_multi_robot/lib/python3.10/site-packages:/home/jason/colcon_ws/install/py_pubsub/lib/python3.10/site-packages:/home/jason/colcon_ws/install/auto_nav/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('LC_PAPER', 'id_ID.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jason/turtlebot3_ws/install/turtlebot3:/home/jason/turtlebot3_ws/install/turtlebot3_simulations:/home/jason/turtlebot3_ws/install/turtlebot3_bringup:/home/jason/turtlebot3_ws/install/turtlebot3_node:/home/jason/turtlebot3_ws/install/turtlebot3_navigation2:/home/jason/turtlebot3_ws/install/turtlebot3_fake_node:/home/jason/turtlebot3_ws/install/turtlebot3_msgs:/home/jason/turtlebot3_ws/install/turtlebot3_gazebo:/home/jason/turtlebot3_ws/install/turtlebot3_description:/home/jason/turtlebot3_ws/install/turtlebot3_cartographer:/home/jason/turtlebot3_ws/install/tb3_4_cartographer:/home/jason/turtlebot3_ws/install/dynamixel_sdk_examples:/home/jason/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/jason/turtlebot3_ws/install/dynamixel_sdk:/home/jason/turtlebot3_ws/install/turtlebot3_teleop:/home/jason/turtlebot3_ws/install/turtlebot3_example:/home/jason/colcon_ws/install/tb3_multi_robot:/home/jason/colcon_ws/install/py_pubsub:/home/jason/colcon_ws/install/auto_nav:/opt/ros/humble')]), 'shell': False}
+[1.882482] (lift_control) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.886421] (lift_control) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/lift_state.dir/src/lift_state.cpp.o\x1b[0m\n'}
+[1.886561] (lift_control) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/lift_command.dir/src/lift_command.cpp.o\x1b[0m\n'}
+[1.887562] (lift_control) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.893462] (lift_control) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/action_server.dir/src/lift_state.cpp.o\x1b[0m\n'}
+[1.899151] (lift_control) StdoutLine: {'line': b'[ 13%] Built target ament_cmake_python_copy_lift_control\n'}
+[1.902996] (-) TimerEvent: {}
+[2.003284] (-) TimerEvent: {}
+[2.058579] (lift_control) StdoutLine: {'line': b'running egg_info\n'}
+[2.059052] (lift_control) StdoutLine: {'line': b'creating lift_control.egg-info\n'}
+[2.059212] (lift_control) StdoutLine: {'line': b'writing lift_control.egg-info/PKG-INFO\n'}
+[2.059409] (lift_control) StdoutLine: {'line': b'writing dependency_links to lift_control.egg-info/dependency_links.txt\n'}
+[2.059536] (lift_control) StdoutLine: {'line': b'writing top-level names to lift_control.egg-info/top_level.txt\n'}
+[2.059622] (lift_control) StdoutLine: {'line': b"writing manifest file 'lift_control.egg-info/SOURCES.txt'\n"}
+[2.060576] (lift_control) StdoutLine: {'line': b"reading manifest file 'lift_control.egg-info/SOURCES.txt'\n"}
+[2.060881] (lift_control) StdoutLine: {'line': b"writing manifest file 'lift_control.egg-info/SOURCES.txt'\n"}
+[2.083442] (lift_control) StdoutLine: {'line': b'[ 13%] Built target ament_cmake_python_build_lift_control_egg\n'}
+[2.103383] (-) TimerEvent: {}
+[2.165630] (lift_control) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/lift_control__rosidl_generator_c.dir/rosidl_generator_c/lift_control/action/detail/command__functions.c.o\x1b[0m\n'}
+[2.166388] (lift_control) StdoutLine: {'line': b'[ 16%] Built target lift_control__cpp\n'}
+[2.177296] (lift_control) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.178638] (lift_control) StdoutLine: {'line': b'[ 24%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.178791] (lift_control) StdoutLine: {'line': b'[ 24%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.203480] (-) TimerEvent: {}
+[2.258216] (lift_control) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking C shared library liblift_control__rosidl_generator_c.so\x1b[0m\n'}
+[2.297059] (lift_control) StdoutLine: {'line': b'[ 27%] Built target lift_control__rosidl_generator_c\n'}
+[2.303572] (-) TimerEvent: {}
+[2.304955] (lift_control) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.309258] (lift_control) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.309470] (lift_control) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.371288] (lift_control) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/lift_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lift_control/action/command__type_support.cpp.o\x1b[0m\n'}
+[2.403677] (-) TimerEvent: {}
+[2.429004] (lift_control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/lift_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lift_control/action/detail/dds_fastrtps/command__type_support.cpp.o\x1b[0m\n'}
+[2.486286] (lift_control) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/lift_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/lift_control/action/command__type_support.cpp.o\x1b[0m\n'}
+[2.503808] (-) TimerEvent: {}
+[2.509945] (lift_control) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/lift_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lift_control/action/detail/command__type_support.cpp.o\x1b[0m\n'}
+[2.534657] (lift_control) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library liblift_control__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.552979] (lift_control) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/lift_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lift_control/action/detail/command__type_support_c.cpp.o\x1b[0m\n'}
+[2.574937] (lift_control) StdoutLine: {'line': b'[ 51%] Built target lift_control__rosidl_typesupport_c\n'}
+[2.596551] (lift_control) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/lift_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lift_control/action/detail/command__type_support.c.o\x1b[0m\n'}
+[2.603935] (-) TimerEvent: {}
+[2.633376] (lift_control) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking C shared library liblift_control__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.669461] (lift_control) StdoutLine: {'line': b'[ 56%] Built target lift_control__rosidl_typesupport_introspection_c\n'}
+[2.704056] (-) TimerEvent: {}
+[2.790245] (lift_control) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library liblift_control__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.804180] (-) TimerEvent: {}
+[2.819056] (lift_control) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library liblift_control__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.860550] (lift_control) StdoutLine: {'line': b'[ 62%] Built target lift_control__rosidl_typesupport_fastrtps_c\n'}
+[2.862915] (lift_control) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library liblift_control__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.877313] (lift_control) StdoutLine: {'line': b'[ 64%] Built target lift_control__rosidl_typesupport_fastrtps_cpp\n'}
+[2.883420] (lift_control) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library liblift_control__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.904317] (-) TimerEvent: {}
+[2.921837] (lift_control) StdoutLine: {'line': b'[ 67%] Built target lift_control__rosidl_typesupport_introspection_cpp\n'}
+[2.924946] (lift_control) StdoutLine: {'line': b'[ 67%] Built target lift_control__rosidl_typesupport_cpp\n'}
+[2.948040] (lift_control) StdoutLine: {'line': b'[ 67%] Built target lift_control\n'}
+[2.969415] (lift_control) StdoutLine: {'line': b'[ 70%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.004525] (-) TimerEvent: {}
+[3.104894] (-) TimerEvent: {}
+[3.205296] (-) TimerEvent: {}
+[3.305722] (-) TimerEvent: {}
+[3.390831] (lift_control) StdoutLine: {'line': b'[ 70%] Built target lift_control__py\n'}
+[3.405882] (-) TimerEvent: {}
+[3.411344] (lift_control) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding C object CMakeFiles/lift_control__rosidl_generator_py.dir/rosidl_generator_py/lift_control/action/_command_s.c.o\x1b[0m\n'}
+[3.446256] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:20:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klift_control\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[3.446498] (lift_control) StderrLine: {'line': b'   20 |     using Command = \x1b[01;31m\x1b[Klift_control\x1b[m\x1b[K::action::Command;\n'}
+[3.446599] (lift_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.450402] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:21:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.450537] (lift_control) StderrLine: {'line': b'   21 |     using GoalHandleCommand = rclcpp_action::ServerGoalHandle<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K>;\n'}
+[3.450626] (lift_control) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.450707] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:21:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.450786] (lift_control) StderrLine: {'line': b'   21 |     using GoalHandleCommand = rclcpp_action::ServerGoalHandle<Command\x1b[01;31m\x1b[K>\x1b[m\x1b[K;\n'}
+[3.450862] (lift_control) StderrLine: {'line': b'      |                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.456780] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.456870] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K>::SharedPtr action_server_;\n'}
+[3.456944] (lift_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.457018] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.457114] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<Command\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr action_server_;\n'}
+[3.457194] (lift_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.457266] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[3.457338] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<Command>::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K action_server_;\n'}
+[3.457415] (lift_control) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.457488] (lift_control) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[3.458355] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaction_server_\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_action_server_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.458478] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<Command>::SharedPtr \x1b[01;31m\x1b[Kaction_server_\x1b[m\x1b[K;\n'}
+[3.458562] (lift_control) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.458637] (lift_control) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[Krcl_action_server_t\x1b[m\x1b[K\n'}
+[3.458710] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.458787] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.458859] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.458929] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.458998] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[3.459067] (lift_control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.459144] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.459220] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.459289] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.459358] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.459433] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[3.459507] (lift_control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.459581] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.459652] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.459721] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.459789] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.459857] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[3.459925] (lift_control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.459993] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid template-id\n'}
+[3.460061] (lift_control) StderrLine: {'line': b'   62 |                                              \x1b[01;31m\x1b[Kstd\x1b[m\x1b[K::shared_ptr<const Command::Goal> goal)\n'}
+[3.460138] (lift_control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.460214] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.460286] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.460354] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.460422] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kconst\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.460490] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<\x1b[01;31m\x1b[Kconst\x1b[m\x1b[K Command::Goal> goal)\n'}
+[3.460558] (lift_control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.460626] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kconst\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.460695] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass template placeholder \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr\x1b[m\x1b[K\xe2\x80\x99 not permitted in this context\n'}
+[3.460767] (lift_control) StderrLine: {'line': b'   62 |                                              \x1b[01;31m\x1b[Kstd\x1b[m\x1b[K::shared_ptr<const Command::Goal> goal)\n'}
+[3.460835] (lift_control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.464924] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:77:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.465049] (lift_control) StderrLine: {'line': b'   77 |     const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleCommand\x1b[m\x1b[K> goal_handle)\n'}
+[3.465139] (lift_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.465219] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:77:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.465291] (lift_control) StderrLine: {'line': b'   77 |     const std::shared_ptr<GoalHandleCommand\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[3.465363] (lift_control) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.471512] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:84:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.471714] (lift_control) StderrLine: {'line': b'   84 |   void handle_accepted(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleCommand\x1b[m\x1b[K> goal_handle)\n'}
+[3.471799] (lift_control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.471876] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:84:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.471951] (lift_control) StderrLine: {'line': b'   84 |   void handle_accepted(const std::shared_ptr<GoalHandleCommand\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[3.472025] (lift_control) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.478058] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:91:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.478263] (lift_control) StderrLine: {'line': b'   91 |   void execute(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleCommand\x1b[m\x1b[K> goal_handle)\n'}
+[3.478352] (lift_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.478427] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:91:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.478500] (lift_control) StderrLine: {'line': b'   91 |   void execute(const std::shared_ptr<GoalHandleCommand\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[3.478570] (lift_control) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.486452] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLift_State::Lift_State(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.486652] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Lift_State\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kaction_server_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.486755] (lift_control) StderrLine: {'line': b'   34 |       this->\x1b[01;31m\x1b[Kaction_server_\x1b[m\x1b[K = rclcpp_action::create_server<Command>(\n'}
+[3.486844] (lift_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.490674] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.490869] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = rclcpp_action::create_server<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K>(\n'}
+[3.490957] (lift_control) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.497694] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kcreate_server<<expression error> >(Lift_State*, const char [12], std::_Bind_helper<false, rclcpp_action::GoalResponse (Lift_State::*)(...), Lift_State*, const std::_Placeholder<1>&, const std::_Placeholder<2>&>::type, std::_Bind_helper<false, rclcpp_action::CancelResponse (Lift_State::*)(int), Lift_State*, const std::_Placeholder<1>&>::type, std::_Bind_helper<false, void (Lift_State::*)(int), Lift_State*, const std::_Placeholder<1>&>::type)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.497893] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = \x1b[01;31m\x1b[Krclcpp_action::create_server<Command>(\x1b[m\x1b[K\n'}
+[3.497981] (lift_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[3.498058] (lift_control) StderrLine: {'line': b'   35 | \x1b[01;31m\x1b[K        this,\x1b[m\x1b[K\n'}
+[3.498146] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                      \n'}
+[3.498224] (lift_control) StderrLine: {'line': b'   36 | \x1b[01;31m\x1b[K        "lift_action",\x1b[m\x1b[K\n'}
+[3.498296] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K                                             \n'}
+[3.498367] (lift_control) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_goal, this, _1, _2),\x1b[m\x1b[K\n'}
+[3.498439] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.498511] (lift_control) StderrLine: {'line': b'   38 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_cancel, this, _1),\x1b[m\x1b[K\n'}
+[3.498582] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[3.498654] (lift_control) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_accepted, this, _1))\x1b[m\x1b[K;\n'}
+[3.498726] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.498798] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:39\x1b[m\x1b[K,\n'}
+[3.498872] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:9\x1b[m\x1b[K:\n'}
+[3.498945] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:58:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ActionT> typename rclcpp_action::Server<ActionT>::SharedPtr rclcpp_action::create_server(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, rclcpp::node_interfaces::NodeClockInterface::SharedPtr, rclcpp::node_interfaces::NodeLoggingInterface::SharedPtr, rclcpp::node_interfaces::NodeWaitablesInterface::SharedPtr, const string&, typename rclcpp_action::Server<ActionT>::GoalCallback, typename rclcpp_action::Server<ActionT>::CancelCallback, typename rclcpp_action::Server<ActionT>::AcceptedCallback, const rcl_action_server_options_t&, rclcpp::CallbackGroup::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.499036] (lift_control) StderrLine: {'line': b'   58 | \x1b[01;36m\x1b[Kcreate_server\x1b[m\x1b[K(\n'}
+[3.499114] (lift_control) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.499191] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:58:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.499269] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.499346] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = \x1b[01;31m\x1b[Krclcpp_action::create_server<Command>(\x1b[m\x1b[K\n'}
+[3.499416] (lift_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[3.499485] (lift_control) StderrLine: {'line': b'   35 | \x1b[01;31m\x1b[K        this,\x1b[m\x1b[K\n'}
+[3.499556] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                      \n'}
+[3.499626] (lift_control) StderrLine: {'line': b'   36 | \x1b[01;31m\x1b[K        "lift_action",\x1b[m\x1b[K\n'}
+[3.499697] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K                                             \n'}
+[3.499767] (lift_control) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_goal, this, _1, _2),\x1b[m\x1b[K\n'}
+[3.499841] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.499912] (lift_control) StderrLine: {'line': b'   38 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_cancel, this, _1),\x1b[m\x1b[K\n'}
+[3.499984] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[3.500056] (lift_control) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_accepted, this, _1))\x1b[m\x1b[K;\n'}
+[3.500136] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.500215] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:39\x1b[m\x1b[K,\n'}
+[3.500287] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:9\x1b[m\x1b[K:\n'}
+[3.500360] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:132:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ActionT, class NodeT> typename rclcpp_action::Server<ActionT>::SharedPtr rclcpp_action::create_server(NodeT, const string&, typename rclcpp_action::Server<ActionT>::GoalCallback, typename rclcpp_action::Server<ActionT>::CancelCallback, typename rclcpp_action::Server<ActionT>::AcceptedCallback, const rcl_action_server_options_t&, rclcpp::CallbackGroup::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.500438] (lift_control) StderrLine: {'line': b'  132 | \x1b[01;36m\x1b[Kcreate_server\x1b[m\x1b[K(\n'}
+[3.500516] (lift_control) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.500589] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:132:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.500661] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.500734] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = \x1b[01;31m\x1b[Krclcpp_action::create_server<Command>(\x1b[m\x1b[K\n'}
+[3.500806] (lift_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[3.500878] (lift_control) StderrLine: {'line': b'   35 | \x1b[01;31m\x1b[K        this,\x1b[m\x1b[K\n'}
+[3.500949] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                      \n'}
+[3.501022] (lift_control) StderrLine: {'line': b'   36 | \x1b[01;31m\x1b[K        "lift_action",\x1b[m\x1b[K\n'}
+[3.501093] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K                                             \n'}
+[3.501176] (lift_control) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_goal, this, _1, _2),\x1b[m\x1b[K\n'}
+[3.501249] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.501322] (lift_control) StderrLine: {'line': b'   38 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_cancel, this, _1),\x1b[m\x1b[K\n'}
+[3.501393] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[3.501463] (lift_control) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_accepted, this, _1))\x1b[m\x1b[K;\n'}
+[3.501534] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.502390] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.502564] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.502645] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.502719] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.502788] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.502857] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.502926] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.502994] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.503072] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.503153] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.503230] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.503302] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:7\x1b[m\x1b[K:\n'}
+[3.503373] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Krclcpp_action::GoalResponse Lift_State::handle_goal(...)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.503444] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:64:69:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.503513] (lift_control) StderrLine: {'line': b'   64 |     RCLCPP_INFO(this->get_logger(), "Received command request: %d", \x1b[01;31m\x1b[Kgoal\x1b[m\x1b[K->command);\n'}
+[3.503582] (lift_control) StderrLine: {'line': b'      |                                                                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.505483] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:69:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.505663] (lift_control) StderrLine: {'line': b'   69 |     if (\x1b[01;31m\x1b[Kgoal\x1b[m\x1b[K->command < 0) {\n'}
+[3.505744] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.505938] (-) TimerEvent: {}
+[3.506487] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Lift_State::execute(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.506611] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:96:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.506695] (lift_control) StderrLine: {'line': b'   96 |     const auto goal = goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kget_goal();\n'}
+[3.506770] (lift_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.510206] (lift_control) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lift_control/liblift_control__rosidl_generator_py.so\x1b[0m\n'}
+[3.510606] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.510721] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = std::make_shared<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K::Feedback>();\n'}
+[3.510807] (lift_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.510891] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[3.510974] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = std::\x1b[01;31m\x1b[Kmake_shared<Command::Feedback>\x1b[m\x1b[K();\n'}
+[3.511057] (lift_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.511282] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.511387] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = \x1b[01;31m\x1b[Kstd::make_shared<Command::Feedback>()\x1b[m\x1b[K;\n'}
+[3.511469] (lift_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[3.511554] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[3.511627] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:3\x1b[m\x1b[K:\n'}
+[3.511699] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.511774] (lift_control) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[3.511848] (lift_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.511920] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.511993] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.512068] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = \x1b[01;31m\x1b[Kstd::make_shared<Command::Feedback>()\x1b[m\x1b[K;\n'}
+[3.512156] (lift_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[3.512231] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:98:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[3.512305] (lift_control) StderrLine: {'line': b'   98 |     auto result = std::\x1b[01;31m\x1b[Kmake_shared<Command::Result>\x1b[m\x1b[K();\n'}
+[3.512378] (lift_control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.512452] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:98:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<Command>()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.512526] (lift_control) StderrLine: {'line': b'   98 |     auto result = \x1b[01;31m\x1b[Kstd::make_shared<Command::Result>()\x1b[m\x1b[K;\n'}
+[3.512606] (lift_control) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[3.512684] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[3.512758] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:3\x1b[m\x1b[K:\n'}
+[3.512836] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.512912] (lift_control) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[3.512986] (lift_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.513059] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.513144] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:105:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.513226] (lift_control) StderrLine: {'line': b'  105 |       if (goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kis_canceling()) {\n'}
+[3.513305] (lift_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.513379] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:107:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.513453] (lift_control) StderrLine: {'line': b'  107 |         goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kcanceled(result);\n'}
+[3.513527] (lift_control) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.513601] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:115:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.513676] (lift_control) StderrLine: {'line': b'  115 |       goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kpublish_feedback(feedback);\n'}
+[3.513749] (lift_control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.513823] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:124:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.513899] (lift_control) StderrLine: {'line': b'  124 |       goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Ksucceed(result);\n'}
+[3.513973] (lift_control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.552007] (lift_control) StdoutLine: {'line': b'[ 75%] Built target lift_control__rosidl_generator_py\n'}
+[3.572486] (lift_control) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/lift_control__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/lift_control/_lift_control_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.573439] (lift_control) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/lift_control__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/lift_control/_lift_control_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.574683] (lift_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/lift_control__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/lift_control/_lift_control_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.577706] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:20:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klift_control\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[3.577864] (lift_control) StderrLine: {'line': b'   20 |     using Command = \x1b[01;31m\x1b[Klift_control\x1b[m\x1b[K::action::Command;\n'}
+[3.577947] (lift_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.581850] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:21:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.581965] (lift_control) StderrLine: {'line': b'   21 |     using GoalHandleCommand = rclcpp_action::ServerGoalHandle<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K>;\n'}
+[3.582039] (lift_control) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.582118] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:21:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.582198] (lift_control) StderrLine: {'line': b'   21 |     using GoalHandleCommand = rclcpp_action::ServerGoalHandle<Command\x1b[01;31m\x1b[K>\x1b[m\x1b[K;\n'}
+[3.582270] (lift_control) StderrLine: {'line': b'      |                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.588513] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.588610] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K>::SharedPtr action_server_;\n'}
+[3.588682] (lift_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.588752] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.588823] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<Command\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr action_server_;\n'}
+[3.588900] (lift_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.588970] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[3.589047] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<Command>::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K action_server_;\n'}
+[3.589121] (lift_control) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.589199] (lift_control) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[3.590032] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:49:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaction_server_\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_action_server_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.590124] (lift_control) StderrLine: {'line': b'   49 |     rclcpp_action::Server<Command>::SharedPtr \x1b[01;31m\x1b[Kaction_server_\x1b[m\x1b[K;\n'}
+[3.590263] (lift_control) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.590336] (lift_control) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[Krcl_action_server_t\x1b[m\x1b[K\n'}
+[3.590407] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.590490] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.590562] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.590632] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.590703] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[3.590774] (lift_control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.590844] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.590921] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.590993] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.591063] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.591141] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[3.591217] (lift_control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.591417] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.591459] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.591492] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.591522] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.591553] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[3.591582] (lift_control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.591611] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid template-id\n'}
+[3.591639] (lift_control) StderrLine: {'line': b'   62 |                                              \x1b[01;31m\x1b[Kstd\x1b[m\x1b[K::shared_ptr<const Command::Goal> goal)\n'}
+[3.591667] (lift_control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.591701] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.591732] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<const Command\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[3.591760] (lift_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.591788] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kconst\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.591816] (lift_control) StderrLine: {'line': b'   62 |                                              std::shared_ptr<\x1b[01;31m\x1b[Kconst\x1b[m\x1b[K Command::Goal> goal)\n'}
+[3.591845] (lift_control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.591870] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kconst\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.591896] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:62:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass template placeholder \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr\x1b[m\x1b[K\xe2\x80\x99 not permitted in this context\n'}
+[3.591922] (lift_control) StderrLine: {'line': b'   62 |                                              \x1b[01;31m\x1b[Kstd\x1b[m\x1b[K::shared_ptr<const Command::Goal> goal)\n'}
+[3.591949] (lift_control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.596718] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:77:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.596830] (lift_control) StderrLine: {'line': b'   77 |     const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleCommand\x1b[m\x1b[K> goal_handle)\n'}
+[3.596866] (lift_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.596895] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:77:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.596923] (lift_control) StderrLine: {'line': b'   77 |     const std::shared_ptr<GoalHandleCommand\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[3.596950] (lift_control) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.603318] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:84:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.603434] (lift_control) StderrLine: {'line': b'   84 |   void handle_accepted(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleCommand\x1b[m\x1b[K> goal_handle)\n'}
+[3.603468] (lift_control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.603497] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:84:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.603526] (lift_control) StderrLine: {'line': b'   84 |   void handle_accepted(const std::shared_ptr<GoalHandleCommand\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[3.603552] (lift_control) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.606126] (-) TimerEvent: {}
+[3.609843] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:91:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.609949] (lift_control) StderrLine: {'line': b'   91 |   void execute(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleCommand\x1b[m\x1b[K> goal_handle)\n'}
+[3.609985] (lift_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.610015] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:91:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.610052] (lift_control) StderrLine: {'line': b'   91 |   void execute(const std::shared_ptr<GoalHandleCommand\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[3.610079] (lift_control) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.618716] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLift_State::Lift_State(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.618870] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Lift_State\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kaction_server_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.618909] (lift_control) StderrLine: {'line': b'   34 |       this->\x1b[01;31m\x1b[Kaction_server_\x1b[m\x1b[K = rclcpp_action::create_server<Command>(\n'}
+[3.618950] (lift_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.623136] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.623287] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = rclcpp_action::create_server<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K>(\n'}
+[3.623347] (lift_control) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.630866] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kcreate_server<<expression error> >(Lift_State*, const char [12], std::_Bind_helper<false, rclcpp_action::GoalResponse (Lift_State::*)(...), Lift_State*, const std::_Placeholder<1>&, const std::_Placeholder<2>&>::type, std::_Bind_helper<false, rclcpp_action::CancelResponse (Lift_State::*)(int), Lift_State*, const std::_Placeholder<1>&>::type, std::_Bind_helper<false, void (Lift_State::*)(int), Lift_State*, const std::_Placeholder<1>&>::type)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.631031] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = \x1b[01;31m\x1b[Krclcpp_action::create_server<Command>(\x1b[m\x1b[K\n'}
+[3.631069] (lift_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[3.631098] (lift_control) StderrLine: {'line': b'   35 | \x1b[01;31m\x1b[K        this,\x1b[m\x1b[K\n'}
+[3.631133] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                      \n'}
+[3.631161] (lift_control) StderrLine: {'line': b'   36 | \x1b[01;31m\x1b[K        "lift_action",\x1b[m\x1b[K\n'}
+[3.631187] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K                                             \n'}
+[3.631214] (lift_control) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_goal, this, _1, _2),\x1b[m\x1b[K\n'}
+[3.631239] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.631264] (lift_control) StderrLine: {'line': b'   38 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_cancel, this, _1),\x1b[m\x1b[K\n'}
+[3.631290] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[3.631314] (lift_control) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_accepted, this, _1))\x1b[m\x1b[K;\n'}
+[3.631340] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.631364] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:39\x1b[m\x1b[K,\n'}
+[3.631390] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:9\x1b[m\x1b[K:\n'}
+[3.631414] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:58:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ActionT> typename rclcpp_action::Server<ActionT>::SharedPtr rclcpp_action::create_server(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, rclcpp::node_interfaces::NodeClockInterface::SharedPtr, rclcpp::node_interfaces::NodeLoggingInterface::SharedPtr, rclcpp::node_interfaces::NodeWaitablesInterface::SharedPtr, const string&, typename rclcpp_action::Server<ActionT>::GoalCallback, typename rclcpp_action::Server<ActionT>::CancelCallback, typename rclcpp_action::Server<ActionT>::AcceptedCallback, const rcl_action_server_options_t&, rclcpp::CallbackGroup::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.631443] (lift_control) StderrLine: {'line': b'   58 | \x1b[01;36m\x1b[Kcreate_server\x1b[m\x1b[K(\n'}
+[3.631466] (lift_control) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.631490] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:58:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.631515] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.631539] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = \x1b[01;31m\x1b[Krclcpp_action::create_server<Command>(\x1b[m\x1b[K\n'}
+[3.631563] (lift_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[3.631587] (lift_control) StderrLine: {'line': b'   35 | \x1b[01;31m\x1b[K        this,\x1b[m\x1b[K\n'}
+[3.631610] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                      \n'}
+[3.631633] (lift_control) StderrLine: {'line': b'   36 | \x1b[01;31m\x1b[K        "lift_action",\x1b[m\x1b[K\n'}
+[3.631656] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K                                             \n'}
+[3.631679] (lift_control) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_goal, this, _1, _2),\x1b[m\x1b[K\n'}
+[3.631704] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.631728] (lift_control) StderrLine: {'line': b'   38 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_cancel, this, _1),\x1b[m\x1b[K\n'}
+[3.631752] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[3.631776] (lift_control) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_accepted, this, _1))\x1b[m\x1b[K;\n'}
+[3.631800] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.631824] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:39\x1b[m\x1b[K,\n'}
+[3.631848] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:9\x1b[m\x1b[K:\n'}
+[3.631874] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:132:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ActionT, class NodeT> typename rclcpp_action::Server<ActionT>::SharedPtr rclcpp_action::create_server(NodeT, const string&, typename rclcpp_action::Server<ActionT>::GoalCallback, typename rclcpp_action::Server<ActionT>::CancelCallback, typename rclcpp_action::Server<ActionT>::AcceptedCallback, const rcl_action_server_options_t&, rclcpp::CallbackGroup::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.631907] (lift_control) StderrLine: {'line': b'  132 | \x1b[01;36m\x1b[Kcreate_server\x1b[m\x1b[K(\n'}
+[3.631934] (lift_control) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.631960] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/create_server.hpp:132:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.631986] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:34:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.632011] (lift_control) StderrLine: {'line': b'   34 |       this->action_server_ = \x1b[01;31m\x1b[Krclcpp_action::create_server<Command>(\x1b[m\x1b[K\n'}
+[3.632036] (lift_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[3.632060] (lift_control) StderrLine: {'line': b'   35 | \x1b[01;31m\x1b[K        this,\x1b[m\x1b[K\n'}
+[3.632084] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                      \n'}
+[3.632113] (lift_control) StderrLine: {'line': b'   36 | \x1b[01;31m\x1b[K        "lift_action",\x1b[m\x1b[K\n'}
+[3.632143] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K                                             \n'}
+[3.632168] (lift_control) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_goal, this, _1, _2),\x1b[m\x1b[K\n'}
+[3.632192] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.632216] (lift_control) StderrLine: {'line': b'   38 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_cancel, this, _1),\x1b[m\x1b[K\n'}
+[3.632240] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[3.632265] (lift_control) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K        std::bind(&Lift_State::handle_accepted, this, _1))\x1b[m\x1b[K;\n'}
+[3.632290] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K         \n'}
+[3.635738] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.635913] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.635993] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.636066] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.636149] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.636223] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.636302] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.636371] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.636438] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.636506] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.636573] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.636639] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:7\x1b[m\x1b[K:\n'}
+[3.636707] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Krclcpp_action::GoalResponse Lift_State::handle_goal(...)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.636781] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:64:69:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.636851] (lift_control) StderrLine: {'line': b'   64 |     RCLCPP_INFO(this->get_logger(), "Received command request: %d", \x1b[01;31m\x1b[Kgoal\x1b[m\x1b[K->command);\n'}
+[3.636919] (lift_control) StderrLine: {'line': b'      |                                                                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.638906] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:69:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.639012] (lift_control) StderrLine: {'line': b'   69 |     if (\x1b[01;31m\x1b[Kgoal\x1b[m\x1b[K->command < 0) {\n'}
+[3.639081] (lift_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.639970] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Lift_State::execute(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.640053] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:96:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.640129] (lift_control) StderrLine: {'line': b'   96 |     const auto goal = goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kget_goal();\n'}
+[3.640204] (lift_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.644016] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.644232] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = std::make_shared<\x1b[01;31m\x1b[KCommand\x1b[m\x1b[K::Feedback>();\n'}
+[3.644359] (lift_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.644440] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[3.644523] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = std::\x1b[01;31m\x1b[Kmake_shared<Command::Feedback>\x1b[m\x1b[K();\n'}
+[3.644601] (lift_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.644701] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.644774] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = \x1b[01;31m\x1b[Kstd::make_shared<Command::Feedback>()\x1b[m\x1b[K;\n'}
+[3.644843] (lift_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[3.644912] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[3.644981] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:3\x1b[m\x1b[K:\n'}
+[3.645056] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.645137] (lift_control) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[3.645211] (lift_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.645279] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.645347] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:97:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.645415] (lift_control) StderrLine: {'line': b'   97 |     auto feedback = \x1b[01;31m\x1b[Kstd::make_shared<Command::Feedback>()\x1b[m\x1b[K;\n'}
+[3.645482] (lift_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[3.645549] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:98:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[3.645616] (lift_control) StderrLine: {'line': b'   98 |     auto result = std::\x1b[01;31m\x1b[Kmake_shared<Command::Result>\x1b[m\x1b[K();\n'}
+[3.645683] (lift_control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.645750] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:98:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<Command>()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.645818] (lift_control) StderrLine: {'line': b'   98 |     auto result = \x1b[01;31m\x1b[Kstd::make_shared<Command::Result>()\x1b[m\x1b[K;\n'}
+[3.645885] (lift_control) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[3.645952] (lift_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[3.646019] (lift_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:3\x1b[m\x1b[K:\n'}
+[3.646091] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.646173] (lift_control) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[3.646242] (lift_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.646314] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.646381] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:105:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.646449] (lift_control) StderrLine: {'line': b'  105 |       if (goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kis_canceling()) {\n'}
+[3.646515] (lift_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.646582] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:107:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.646649] (lift_control) StderrLine: {'line': b'  107 |         goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kcanceled(result);\n'}
+[3.646715] (lift_control) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.646782] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:115:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.646849] (lift_control) StderrLine: {'line': b'  115 |       goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kpublish_feedback(feedback);\n'}
+[3.646915] (lift_control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.646981] (lift_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:124:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[3.647047] (lift_control) StderrLine: {'line': b'  124 |       goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Ksucceed(result);\n'}
+[3.647119] (lift_control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[3.661053] (lift_control) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lift_control/lift_control_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.661396] (lift_control) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lift_control/lift_control_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.705913] (lift_control) StdoutLine: {'line': b'[ 89%] Built target lift_control__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.706123] (lift_control) StdoutLine: {'line': b'[ 89%] Built target lift_control__rosidl_typesupport_c__pyext\n'}
+[3.706218] (-) TimerEvent: {}
+[3.708494] (lift_control) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lift_control/lift_control_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.749435] (lift_control) StdoutLine: {'line': b'[ 91%] Built target lift_control__rosidl_typesupport_introspection_c__pyext\n'}
+[3.806412] (-) TimerEvent: {}
+[3.906844] (-) TimerEvent: {}
+[4.007290] (-) TimerEvent: {}
+[4.105320] (lift_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/action_server.dir/build.make:76: CMakeFiles/action_server.dir/src/lift_state.cpp.o] Error 1\n'}
+[4.105653] (lift_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:596: CMakeFiles/action_server.dir/all] Error 2\n'}
+[4.105769] (lift_control) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[4.107394] (-) TimerEvent: {}
+[4.207813] (-) TimerEvent: {}
+[4.229365] (lift_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/lift_state.dir/build.make:76: CMakeFiles/lift_state.dir/src/lift_state.cpp.o] Error 1\n'}
+[4.229568] (lift_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:622: CMakeFiles/lift_state.dir/all] Error 2\n'}
+[4.308050] (-) TimerEvent: {}
+[4.408633] (-) TimerEvent: {}
+[4.508992] (-) TimerEvent: {}
+[4.609377] (-) TimerEvent: {}
+[4.709735] (-) TimerEvent: {}
+[4.810081] (-) TimerEvent: {}
+[4.910367] (-) TimerEvent: {}
+[5.010719] (-) TimerEvent: {}
+[5.111067] (-) TimerEvent: {}
+[5.211440] (-) TimerEvent: {}
+[5.311779] (-) TimerEvent: {}
+[5.412117] (-) TimerEvent: {}
+[5.512577] (-) TimerEvent: {}
+[5.612913] (-) TimerEvent: {}
+[5.713250] (-) TimerEvent: {}
+[5.813592] (-) TimerEvent: {}
+[5.913941] (-) TimerEvent: {}
+[6.014281] (-) TimerEvent: {}
+[6.114641] (-) TimerEvent: {}
+[6.215020] (-) TimerEvent: {}
+[6.315419] (-) TimerEvent: {}
+[6.415799] (-) TimerEvent: {}
+[6.516200] (-) TimerEvent: {}
+[6.616552] (-) TimerEvent: {}
+[6.716931] (-) TimerEvent: {}
+[6.817367] (-) TimerEvent: {}
+[6.917764] (-) TimerEvent: {}
+[7.018175] (-) TimerEvent: {}
+[7.118520] (-) TimerEvent: {}
+[7.181553] (lift_control) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable lift_command\x1b[0m\n'}
+[7.218749] (-) TimerEvent: {}
+[7.319181] (-) TimerEvent: {}
+[7.419746] (-) TimerEvent: {}
+[7.446969] (lift_control) StdoutLine: {'line': b'[ 94%] Built target lift_command\n'}
+[7.448185] (lift_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[7.450389] (lift_control) CommandEnded: {'returncode': 2}
+[7.459299] (lift_control) JobEnded: {'identifier': 'lift_control', 'rc': 2}
+[7.469937] (-) EventReactorShutdown: {}

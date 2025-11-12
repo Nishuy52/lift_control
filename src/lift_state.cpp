@@ -8,11 +8,9 @@
 #include "std_msgs/msg/string.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
+#include "lift_control/action/command.hpp"
 
 using namespace std::chrono_literals;
-
-/* This example creates a subclass of Node and uses std::bind() to register a
-* member function as a callback from the timer. */
 
 class Lift_State : public rclcpp::Node
 {
@@ -31,7 +29,7 @@ class Lift_State : public rclcpp::Node
       
       //Initialize action server
       using namespace std::placeholders;
-      this->_action_server = rclcpp_action::create_server<std_msgs::msg::String>(
+      this->action_server_ = rclcpp_action::create_server<Command>(
         this,
         "lift_action",
         std::bind(&Lift_State::handle_goal, this, _1, _2),
@@ -128,7 +126,7 @@ class Lift_State : public rclcpp::Node
   }
 };
 
-RCLCPP_COMPONENTS_REGISTER_NODE(lift_control::Lift_State)
+RCLCPP_COMPONENTS_REGISTER_NODE(Lift_State)
 
 int main(int argc, char * argv[])
 {

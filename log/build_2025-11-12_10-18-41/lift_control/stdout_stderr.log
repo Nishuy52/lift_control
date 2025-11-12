@@ -1,0 +1,84 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_action: 16.0.15 (/opt/ros/humble/share/rclcpp_action/cmake)
+-- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_c>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_fastrtps_c>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_cpp>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_fastrtps_cpp>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_typesupport_introspection_cpp>;/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_c;/home/jason/lift_ws/src/lift_control/build/lift_control/rosidl_generator_py;$<BUILD_INTERFACE:/home/jason/lift_ws/src/lift_control/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jason/lift_ws/src/lift_control/build/lift_control
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_generator_c[0m
+[35m[1mConsolidate compiler generated dependencies of target action_server[0m
+[  2%] Built target lift_control__cpp
+[ 10%] Built target lift_control__rosidl_generator_c
+[ 10%] Built target ament_cmake_python_copy_lift_control
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_introspection_c[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_fastrtps_c[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/action_server.dir/src/lift_state.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_fastrtps_cpp[0m
+[ 21%] Built target lift_control__rosidl_typesupport_c
+[ 29%] Built target lift_control__rosidl_typesupport_introspection_cpp
+[ 37%] Built target lift_control__rosidl_typesupport_introspection_c
+[ 45%] Built target lift_control__rosidl_typesupport_fastrtps_c
+[ 54%] Built target lift_control__rosidl_typesupport_cpp
+[35m[1mConsolidate compiler generated dependencies of target lift_state[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_command[0m
+[ 62%] Built target lift_control__rosidl_typesupport_fastrtps_cpp
+[ 64%] [32mBuilding CXX object CMakeFiles/lift_state.dir/src/lift_state.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/lift_command.dir/src/lift_command.cpp.o[0m
+[ 67%] Built target lift_control
+[ 70%] Built target lift_control__py
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_generator_py[0m
+[ 75%] Built target lift_control__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target lift_control__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 81%] Built target lift_control__rosidl_typesupport_introspection_c__pyext
+[ 86%] Built target lift_control__rosidl_typesupport_c__pyext
+[ 91%] Built target lift_control__rosidl_typesupport_fastrtps_c__pyext
+running egg_info
+writing lift_control.egg-info/PKG-INFO
+writing dependency_links to lift_control.egg-info/dependency_links.txt
+writing top-level names to lift_control.egg-info/top_level.txt
+reading manifest file 'lift_control.egg-info/SOURCES.txt'
+writing manifest file 'lift_control.egg-info/SOURCES.txt'
+[ 91%] Built target ament_cmake_python_build_lift_control_egg
+[01m[K/home/jason/lift_ws/src/lift_control/src/lift_state.cpp:11:10:[m[K [01;31m[Kfatal error: [m[Klift_control/action/command.hpp: No such file or directory
+   11 | #include [01;31m[K"lift_control/action/command.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/action_server.dir/build.make:76: CMakeFiles/action_server.dir/src/lift_state.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:596: CMakeFiles/action_server.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 94%] [32m[1mLinking CXX executable lift_state[0m
+[ 94%] Built target lift_state
+[ 97%] [32m[1mLinking CXX executable lift_command[0m
+[ 97%] Built target lift_command
+gmake: *** [Makefile:146: all] Error 2
