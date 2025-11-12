@@ -40,14 +40,33 @@ ament_target_dependencies(action_server
   rclcpp_action
   rclcpp_components
   std_msgs)
-
 if(TARGET ${PROJECT_NAME})
   target_link_libraries(action_server "${cpp_typesupport_target}")
 endif()
-
 rclcpp_components_register_nodes(action_server "Lift_State")
-
 install(TARGETS action_server
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
+
+add_library(action_client SHARED
+  src/lift_command.cpp)
+target_include_directories(action_client PRIVATE
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_definitions(action_client
+  PRIVATE "LIFT_CONTROL_BUILDING_DLL")
+ament_target_dependencies(action_client
+  "rclcpp"
+  "rclcpp_action"
+  "rclcpp_components"
+  "std_msgs")
+if(TARGET ${PROJECT_NAME})
+  target_link_libraries(action_client "${cpp_typesupport_target}")
+endif()
+rclcpp_components_register_nodes(action_client "Lift_Commander")
+install(TARGETS
+  action_client
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
@@ -69,7 +88,8 @@ add_executable(lift_command src/lift_command.cpp)
 ament_target_dependencies(lift_command 
   rclcpp 
   std_msgs 
-  rclcpp_action)
+  rclcpp_action
+  rclcpp_components)
 
 if(TARGET ${PROJECT_NAME})
   target_link_libraries(lift_command "${cpp_typesupport_target}")
