@@ -168,9 +168,6 @@ Second Level (100) --[GO DOWN]--> Moving Down (011) --[COMPLETE]--> First Level 
 - Hall effect sensor integration for floor detection
 - Speed control for movement
 - Multi-floor support (beyond 2 levels)
-- Door control integration
-- Weight sensor integration
-- Emergency alarm system
 
 ### Simulated Behavior
 Currently, the lift:
