@@ -1,5 +1,0 @@
-int32 command
----
-int32 completion
----
-int32 status
