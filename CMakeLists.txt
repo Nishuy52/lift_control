@@ -71,6 +71,19 @@ install(TARGETS
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
 
+# lift rpi executable
+add_executable(lift_rpi src/lift_rpi.cpp)
+target_link_libraries(lift_rpi wiringPi)
+ament_target_dependencies(lift_rpi 
+  rclcpp 
+  std_msgs 
+  rclcpp_action 
+  rclcpp_components)
+
+if(TARGET ${PROJECT_NAME})
+  target_link_libraries(lift_rpi "${cpp_typesupport_target}")
+endif()
+
 # lift state executable
 add_executable(lift_state src/lift_state.cpp)
 ament_target_dependencies(lift_state 
@@ -98,6 +111,7 @@ endif()
 install(TARGETS
   lift_state
   lift_command
+  lift_rpi
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
