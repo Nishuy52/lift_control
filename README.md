@@ -98,13 +98,7 @@ The CLI will display:
 3. Lift moves to Second Level (110 → 100)
 4. Command succeeds
 
-### Example 2: Emergency Stop
-1. While lift is moving (011 or 110)
-2. Enter `0` (STOP)
-3. Lift stops between levels (010)
-4. Can now move UP or DOWN
-
-### Example 3: Invalid Command (Rejected)
+### Example 2: Invalid Command (Rejected)
 1. Lift is at Second Level (100)
 2. Enter `1` (GO UP) - **REJECTED**
 3. Only GO DOWN is allowed from second level
@@ -174,9 +168,6 @@ Second Level (100) --[GO DOWN]--> Moving Down (011) --[COMPLETE]--> First Level 
 - Hall effect sensor integration for floor detection
 - Speed control for movement
 - Multi-floor support (beyond 2 levels)
-- Door control integration
-- Weight sensor integration
-- Emergency alarm system
 
 ### Simulated Behavior
 Currently, the lift:
@@ -222,4 +213,4 @@ Jason
 
 ## Version
 
-0.0.0
+0.0.1
