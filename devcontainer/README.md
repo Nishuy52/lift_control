@@ -8,9 +8,6 @@ This guide provides instructions for setting up a Docker-based development envir
 - [Development Container Setup](#development-container-setup)
 - [Remote Development via SSH](#remote-development-via-ssh)
 - [Building and Running](#building-and-running)
-- [Development Workflow](#development-workflow)
-- [Production Deployment](#production-deployment)
-- [Troubleshooting](#troubleshooting)
 
 ---
 
