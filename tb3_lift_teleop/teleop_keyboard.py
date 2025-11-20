@@ -38,6 +38,7 @@ import os
 import select
 import sys
 import rclpy
+import time
 
 from geometry_msgs.msg import Twist
 from rclpy.action import ActionClient
@@ -152,7 +153,7 @@ class LiftActionClient:
         self._action_client = ActionClient(node, Command, '/lift_action')
         self.goal_handle = None
         self.current_lift_status = "Unknown"
-        
+        self.count = 0
         # Create subscriber for lift state
         self._state_subscriber = node.create_subscription(
             StringMsg,
@@ -168,6 +169,9 @@ class LiftActionClient:
     def _state_callback(self, msg):
         """Callback for lift state updates."""
         self.current_lift_status = msg.data
+        print(f'Lift State: {self.current_lift_status}')
+        self.count += 1
+
     
     def send_command(self, command):
         """Send lift command (0=STOP, 1=UP, 2=DOWN)."""
@@ -239,7 +243,6 @@ class LiftActionClient:
             print('Lift result: Canceled')
         elif status == 6:  # ABORTED
             print('Lift result: Aborted')
-        
         print(f'Lift State: {self.current_lift_status}')
         self.goal_handle = None
 
@@ -271,22 +274,22 @@ def main():
             if key == 'w':
                 target_linear_velocity =\
                     check_linear_limit_velocity(target_linear_velocity + LIN_VEL_STEP_SIZE)
-                status = status + 1
+                lift_action_client.count += 1
                 print_vels(target_linear_velocity, target_angular_velocity)
             elif key == 'x':
                 target_linear_velocity =\
                     check_linear_limit_velocity(target_linear_velocity - LIN_VEL_STEP_SIZE)
-                status = status + 1
+                lift_action_client.count += 1
                 print_vels(target_linear_velocity, target_angular_velocity)
             elif key == 'a':
                 target_angular_velocity =\
                     check_angular_limit_velocity(target_angular_velocity + ANG_VEL_STEP_SIZE)
-                status = status + 1
+                lift_action_client.count += 1
                 print_vels(target_linear_velocity, target_angular_velocity)
             elif key == 'd':
                 target_angular_velocity =\
                     check_angular_limit_velocity(target_angular_velocity - ANG_VEL_STEP_SIZE)
-                status = status + 1
+                lift_action_client.count += 1
                 print_vels(target_linear_velocity, target_angular_velocity)
             elif key == ' ' or key == 's':
                 target_linear_velocity = 0.0
@@ -311,9 +314,9 @@ def main():
                 if (key == '\x03'):
                     break
 
-            if status == 20:
+            if lift_action_client.count == 10:
                 print(msg.format(lift_action_client.current_lift_status))
-                status = 0
+                lift_action_client.count = 0
 
             twist = Twist()
 
