@@ -3,6 +3,7 @@
 #include <memory>
 #include <string>
 #include <thread>
+#include <atomic>
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
@@ -38,7 +39,7 @@ class Lift_State : public rclcpp::Node
     };
     
     explicit Lift_State(const rclcpp::NodeOptions & options = rclcpp::NodeOptions())
-    : Node("lift_state", options), count_(0)
+    : Node("lift_state", options), count_(0), cancel_requested_(false), stop_requested_(false)
     {
       // Initialize WiringPi using BOARD pin numbering
       if (wiringPiSetupPhys() == -1) {
@@ -111,14 +112,18 @@ class Lift_State : public rclcpp::Node
     // Lift Status Members
     LiftStatus current_status_ = FIRST_LEVEL;
     std::mutex status_mutex_;
+    
+    // Cancel and stop flags
+    std::atomic<bool> cancel_requested_;
+    std::atomic<bool> stop_requested_;
 
-    // GPIO Control Functions
+    // GPIO Control Functions with cancellation support
     void ramped_step(int direction, std::function<bool()> stop_condition)
     {
       digitalWrite(DIR_PIN, direction);
       
       int step_count = 0;
-      while (!stop_condition()) {
+      while (!stop_condition() && !cancel_requested_ && !stop_requested_) {
         // Apply proportional ramping effect
         double delay;
         if (step_count < ACCELERATE_RAMP_STEPS) {
@@ -136,7 +141,14 @@ class Lift_State : public rclcpp::Node
         step_count++;
       }
       
-      RCLCPP_INFO(this->get_logger(), "Decelerating");
+      // Check if we were interrupted
+      if (cancel_requested_ || stop_requested_) {
+        RCLCPP_INFO(this->get_logger(), "Movement interrupted - decelerating");
+      } else {
+        RCLCPP_INFO(this->get_logger(), "Target reached - decelerating");
+      }
+      
+      // Always decelerate smoothly
       for (int decelerate_count = 0; decelerate_count < DECELERATE_RAMP_STEPS; decelerate_count++) {
         double delay = MAX_SPEED_DELAY + (MIN_SPEED_DELAY - MAX_SPEED_DELAY) * 
                        (static_cast<double>(decelerate_count) / DECELERATE_RAMP_STEPS);
@@ -151,14 +163,20 @@ class Lift_State : public rclcpp::Node
     {
       RCLCPP_INFO(this->get_logger(), "Going up to Level 1");
       ramped_step(CW, [this]() { return digitalRead(HALL_PIN_1) == LOW; });
-      RCLCPP_INFO(this->get_logger(), "Reached Level 1");
+      
+      if (!cancel_requested_ && !stop_requested_) {
+        RCLCPP_INFO(this->get_logger(), "Reached Level 1");
+      }
     }
 
     void go_down()
     {
       RCLCPP_INFO(this->get_logger(), "Going down to Ground level");
       ramped_step(CCW, [this]() { return digitalRead(HALL_PIN_2) == LOW; });
-      RCLCPP_INFO(this->get_logger(), "Reached Ground Level");
+      
+      if (!cancel_requested_ && !stop_requested_) {
+        RCLCPP_INFO(this->get_logger(), "Reached Ground Level");
+      }
     }
 
     // Publisher Callback
@@ -206,6 +224,11 @@ class Lift_State : public rclcpp::Node
         return rclcpp_action::GoalResponse::REJECT;
       }
       
+      // STOP command can always be accepted
+      if (goal->command == STOP) {
+        return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
+      }
+      
       // Check if command is allowed in current state
       bool command_allowed = false;
       std::string rejection_reason;
@@ -228,8 +251,8 @@ class Lift_State : public rclcpp::Node
           
         case MOVING_UP:
         case MOVING_DOWN:
-          command_allowed = (goal->command == STOP);
-          rejection_reason = "Lift is Moving - Only STOP accepted";
+          // During movement, allow new movement commands (will cancel current)
+          command_allowed = true;
           break;
       }
       
@@ -246,6 +269,10 @@ class Lift_State : public rclcpp::Node
     {
       RCLCPP_INFO(this->get_logger(), "Received request to cancel command");
       (void)goal_handle;
+      
+      // Set cancel flag to stop movement
+      cancel_requested_ = true;
+      
       return rclcpp_action::CancelResponse::ACCEPT;
     }
 
@@ -260,6 +287,10 @@ class Lift_State : public rclcpp::Node
     {
       RCLCPP_INFO(this->get_logger(), "Executing command");
       
+      // Reset cancel and stop flags
+      cancel_requested_ = false;
+      stop_requested_ = false;
+      
       const auto goal = goal_handle->get_goal();
       auto feedback = std::make_shared<Command::Feedback>();
       auto result = std::make_shared<Command::Result>();
@@ -268,6 +299,9 @@ class Lift_State : public rclcpp::Node
       
       // Handle STOP command
       if (command == STOP) {
+        RCLCPP_INFO(this->get_logger(), "STOP command received - stopping lift");
+        stop_requested_ = true;
+        
         std::lock_guard<std::mutex> lock(status_mutex_);
         current_status_ = BETWEEN_LEVELS;
         feedback->status = 1;  // Reached (stopped)
@@ -308,6 +342,16 @@ class Lift_State : public rclcpp::Node
           go_up();
         } else {  // GO_DOWN
           go_down();
+        }
+        
+        // Check if we were canceled
+        if (cancel_requested_) {
+          std::lock_guard<std::mutex> lock(status_mutex_);
+          current_status_ = BETWEEN_LEVELS;
+          result->completion = 0;  // Not reached
+          goal_handle->canceled(result);
+          RCLCPP_INFO(this->get_logger(), "Command canceled - Lift stopped between levels");
+          return;
         }
         
         // Movement complete
