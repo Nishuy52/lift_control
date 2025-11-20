@@ -73,7 +73,10 @@ a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi 
 space key, s : force stop
 
 Lift control:
-q/e : Lift up/down
+q : Lift up
+e : Lift down
+r : Stop lift (emergency stop - stops movement immediately)
+t : Cancel lift action (cancels current goal)
 
 CTRL-C to quit
 
@@ -147,7 +150,7 @@ class LiftActionClient:
     def __init__(self, node):
         self.node = node
         self._action_client = ActionClient(node, Command, '/lift_action')
-        self.goal_in_progress = False
+        self.goal_handle = None
         self.current_lift_status = "Unknown"
         
         # Create subscriber for lift state
@@ -168,9 +171,9 @@ class LiftActionClient:
     
     def send_command(self, command):
         """Send lift command (0=STOP, 1=UP, 2=DOWN)."""
-        if self.goal_in_progress:
-            print('Lift goal in progress, please wait')
-            return
+        if self.goal_handle is not None:
+            print('Previous lift goal still active, canceling it first...')
+            self.cancel_goal()
         
         goal_msg = Command.Goal()
         goal_msg.command = command
@@ -178,21 +181,41 @@ class LiftActionClient:
         cmd_str = ["STOP", "GO UP", "GO DOWN"]
         print(f'Sending lift command: {cmd_str[command]}')
         
-        self.goal_in_progress = True
         send_goal_future = self._action_client.send_goal_async(
             goal_msg,
             feedback_callback=self._feedback_callback
         )
         send_goal_future.add_done_callback(self._goal_response_callback)
     
+    def cancel_goal(self):
+        """Cancel the current goal."""
+        if self.goal_handle is None:
+            print('No active lift goal to cancel')
+            return
+        
+        print('Canceling lift goal...')
+        cancel_future = self.goal_handle.cancel_goal_async()
+        cancel_future.add_done_callback(self._cancel_done_callback)
+    
+    def _cancel_done_callback(self, future):
+        """Handle cancel response."""
+        cancel_response = future.result()
+        if len(cancel_response.goals_canceling) > 0:
+            print('Lift goal successfully canceled')
+        else:
+            print('Lift goal cancellation failed')
+        self.goal_handle = None
+    
     def _goal_response_callback(self, future):
         """Handle goal acceptance/rejection."""
         goal_handle = future.result()
         if not goal_handle.accepted:
             print('Lift command REJECTED')
-            self.goal_in_progress = False
+            self.goal_handle = None
             return
+        
         print('Lift command ACCEPTED')
+        self.goal_handle = goal_handle
         
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(self._result_callback)
@@ -207,10 +230,18 @@ class LiftActionClient:
     def _result_callback(self, future):
         """Handle final result."""
         result = future.result().result
-        completion_str = "Reached" if result.completion == 1 else "Stopped"
-        print(f'Lift result: {completion_str}')
+        status = future.result().status
+        
+        if status == 4:  # SUCCEEDED
+            completion_str = "Reached" if result.completion == 1 else "Stopped"
+            print(f'Lift result: {completion_str}')
+        elif status == 5:  # CANCELED
+            print('Lift result: Canceled')
+        elif status == 6:  # ABORTED
+            print('Lift result: Aborted')
+        
         print(f'Lift State: {self.current_lift_status}')
-        self.goal_in_progress = False
+        self.goal_handle = None
 
 
 def main():
@@ -269,6 +300,13 @@ def main():
             elif key == 'e':
                 # Lift down
                 lift_action_client.send_command(2)
+            elif key == 'r':
+                # Stop lift (send STOP command - stops movement at current position)
+                print('Emergency stop - stopping lift at current position')
+                lift_action_client.send_command(0)
+            elif key == 't':
+                # Cancel current lift action
+                lift_action_client.cancel_goal()
             else:
                 if (key == '\x03'):
                     break
